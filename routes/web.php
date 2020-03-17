@@ -17,11 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/usuarios', 'UserController@index');
+Route::get('/usuarios', 'UserController@index')
+        ->name('users');
 
 
+Route::get('/usuarios/{$id}', 'UserController@show')
+        ->where('id', '[0-9]+')
+        ->name('users.show');
 
-
+// Por ahora no va a ningun metodo.
+Route::get('/usuarios', 'UserController@index') 
+        ->name('users'); 
 
 
 
