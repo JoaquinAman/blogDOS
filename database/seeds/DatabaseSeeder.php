@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
             'professions'
             ]); 
 
-        // $this->call(UsersTableSeeder::class);
         $this->call(ProfessionSeeder::class);
         $this->call(UserSeeder::class);
     }

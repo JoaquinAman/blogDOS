@@ -36,4 +36,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function profession() //busca el profession_id, si yo hubiera puesto id_profession en la tabla
+                                 //despues de class tendria que poner: ,'id_profession'
+    {
+        return $this->belongsTo(Profession::class);
+    }
+
+    // public function isAdmin()
+    // {
+    //     return $this->is_admin;
+    // }
+
 }

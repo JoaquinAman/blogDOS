@@ -17,13 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/saludar/{name}/saludar', 'UserController@saludar');
-
-Route::get('/saludar/users', 'UserController@users');
-
 Route::get('/usuarios', 'UserController@index');
 
-Route::get('/usuarios/create', 'UserController@create');
+
 
 
 
