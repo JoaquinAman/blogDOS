@@ -72,9 +72,20 @@
             
 
             <br>
-            <button type="submit" class="btn btn-primary">Crear usuario</button>
-    
-            <a href="{{ url('/usuarios/') }}" class="btn btn-link">Regresar al listado de usuarios</a>
+
+            <div class="d-flex justify-content-between align-items-end mb-2">
+
+                <button type="submit" class="btn btn-primary">Crear usuario</button>
+        
+                <a href="{{ url('/usuarios/') }}" class="btn btn-link">Regresar al listado de usuarios</a>
+
+            </div>
+
+
+
+
+
+
 
         </form>
         </div>
