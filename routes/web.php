@@ -18,16 +18,23 @@ Route::get('/', function () {
 });
 
 Route::get('/usuarios', 'UserController@index')
-        ->name('users');
+        ->name('users.index');
 
-
-Route::get('/usuarios/{$id}', 'UserController@show')
+Route::get('/usuarios/{id}', 'UserController@show')
         ->where('id', '[0-9]+')
         ->name('users.show');
 
-// Por ahora no va a ningun metodo.
-Route::get('/usuarios', 'UserController@index') 
-        ->name('users'); 
+Route::get('/usuarios/nuevo', 'UserController@create')->name('users.create');
+
+Route::post('/usuarios/store', 'UserController@store'); 
+
+Route::get('/usuarios/{user}/edit', 'UserController@edit')->name('users.edit');
+
+Route::put('/usuarios/{user}/update', 'UserController@update')->name('users.update');
+
+Route::delete('/usuario/{user}/elimina', 'UserController@destroy')->name('users.destroy');
+
+
 
 
 
